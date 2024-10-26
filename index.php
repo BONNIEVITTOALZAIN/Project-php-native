@@ -19,25 +19,62 @@ if (!isset($_SESSION['id_admin'])) {
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Museum Management</a>
+        <a class="navbar-brand" href="./index.php">Museum Management</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="museum/index.php">Museum</a>
+                <!-- Museum Management Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="museumDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Museum Management
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="museumDropdown">
+                        <a class="dropdown-item" href="museum/index.php">Museums</a>
+                        <a class="dropdown-item" href="pameran/index.php">Exhibitions</a>
+                        <a class="dropdown-item" href="jenis_kunjungan/index.php">Visit Types</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="negara/index.php">Negara</a>
+                <!-- Payment Management Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="paymentDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Payment Management
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="paymentDropdown">
+                        <a class="dropdown-item" href="statusBayar/index.php">Status Bayar</a>
+                        <a class="dropdown-item" href="jenisBayar/index.php">Jenis Bayar</a>
+                        <a class="dropdown-item" href="metodePembayaran/index.php">Metode Pembayaran</a>
+                        <a class="dropdown-item" href="nota/index.php">Nota</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="provinsi/index.php">Provinsi</a>
+                <!-- Visitor Management Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="visitorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Visitor Management
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="visitorDropdown">
+                        <a class="dropdown-item" href="pengunjung/index.php">Visitors</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="kota/index.php">Kota</a>
+                <!-- Location Management Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="locationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Location Management
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="locationDropdown">
+                        <a class="dropdown-item" href="negara/index.php">Negara</a>
+                        <a class="dropdown-item" href="provinsi/index.php">Provinsi</a>
+                        <a class="dropdown-item" href="kota/index.php">Kota</a>
+                    </div>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Logout</a>
+                <!-- Logout Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="logoutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Logout
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="logoutDropdown">
+                        <a class="dropdown-item" href="logout.php">Logout</a>
+                    </div>
                 </li>
             </ul>
         </div>
